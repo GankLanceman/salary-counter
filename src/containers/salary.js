@@ -1,20 +1,16 @@
 import { connect } from "react-redux";
 import React from "react";
 
-import CalculationForm from "../components/calculation-form"
-
-const Salary = ({ type }) => {
+const Salary = ({ amountEarned }) => {
   return (
-    <div>
-      <CalculationForm submitClicked={(e) => console.log(e)}/>
+    <div className="salary-text">
+      {amountEarned.toFixed(2)}
     </div>
   )
 }
 
-const mapStateToProps = ({ rate, type, hours }) => ({
-  rate,
-  type,
-  hours
+const mapStateToProps = ({ amountEarned }) => ({
+  amountEarned
 })
 
 export default connect(mapStateToProps)(Salary);

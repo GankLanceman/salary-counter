@@ -20,8 +20,13 @@ body {
   font-size: 4em;
 }
 
-.time-text {
+.salary-text {
   font-size: 3em;
+  font-weight: bold;
+}
+
+.time-text {
+  font-size: 2.5em;
   font-weight: bold;
 }
 

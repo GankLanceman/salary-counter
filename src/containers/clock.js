@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 
-import TimeDisplay from "../components/time-display"
+import { recalculateSalary } from "../actions";
+import TimeDisplay from "../components/time-display";
 import DateDisplay from "../components/date-display";
 
 class Clock extends Component {
@@ -9,13 +11,14 @@ class Clock extends Component {
     this.state = {
       currentTime: new Date()
     }
+
+    this.timerCallback = this.timerCallback.bind(this);
   }
 
   componentWillMount() {
+
     this.timer = setInterval(() => {
-      this.setState({
-        currentTime: new Date()
-      })
+      this.timerCallback();
     },
       1000)
   }
@@ -32,6 +35,18 @@ class Clock extends Component {
       </div>
     )
   }
+
+  timerCallback() {
+    this.props.recalculateSalary();
+
+    this.setState({
+      currentTime: new Date()
+    });
+  }
 }
 
-export default Clock;
+const mapDispatchToProps = {
+  recalculateSalary
+}
+
+export default connect(null, mapDispatchToProps)(Clock);

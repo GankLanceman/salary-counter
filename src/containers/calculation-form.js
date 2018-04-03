@@ -10,15 +10,15 @@ const CalculationForm = ({ payRate, payType, scheduledHours, setPayRate, setPayT
       <p>
         Enter your pay information to start calculation
       </p>
-      <input type="text" placeholder="Pay Rate" defaultValue={payRate} onBlur={(e) => setPayRate(Number(e.target.value))} />
+      <input type="text" placeholder={payRate ? payRate : "Pay Rate"} value={payRate ? payRate : ""} onChange={(e) => setPayRate(Number(e.target.value))} />
       <select name="Pay Type" id="pay-type-select" value={payType} onChange={(e) => setPayType(Number(e.target.value))}>
         <option value={PAY_TYPE.HOURLY}>Hourly</option>
         <option value={PAY_TYPE.SALARY}>Salary</option>
       </select>
-      <input type="text" placeholder="Scheduled Hours Today" defaultValue={scheduledHours} onBlur={(e) => setScheduledHours(Number(e.target.value))} />
+      <input type="text" placeholder="Scheduled Hours Today" value={scheduledHours ? scheduledHours : ""} onChange={(e) => setScheduledHours(Number(e.target.value))} />
       <div>
         <button onClick={() => setCountingStatus(true)}>Start Counting</button>
-        <button onClick={resetPayRate}>Reset</button>
+        <button onClick={() => resetPayRate()}>Reset</button>
       </div>
     </div>
   )

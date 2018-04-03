@@ -4,9 +4,13 @@ import padStart from "lodash.padstart"
 import '../styles/app.css';
 
 const TimeDisplay = ({ currentTime }) => {
+  
+  // Determine the current hour
   let hours = currentTime.getHours();
   hours = hours > 12 ? hours - 12 : hours
   hours = padStart(hours, 2, "0");
+
+  // Determine the minutes and seconds
   const minutes = padStart(currentTime.getMinutes(), 2, "0");
   const seconds = padStart(currentTime.getSeconds(), 2, "0");
 

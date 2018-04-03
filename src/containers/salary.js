@@ -3,7 +3,7 @@ import React from "react";
 
 const Salary = ({ amountEarned }) => {
   return (
-    <div className="salary-text">
+    <div className={`salary-text ${amountEarned > 0 ? "green-text" : ""}`}>
       {amountEarned.toFixed(2)}
     </div>
   )

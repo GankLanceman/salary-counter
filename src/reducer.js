@@ -40,7 +40,9 @@ const rootReducer = (state = initialState, action) => {
         scheduledHours: action.scheduledHours
       }
     case RESET_PAY_RATE:
-      return initialState;
+      return {
+        ...initialState
+      };
     case SET_COUNTING_STATUS:
       if (state.payRate === null || state.scheduledHours === null) {
         return {

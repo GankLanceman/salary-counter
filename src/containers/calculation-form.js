@@ -1,8 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import { PAY_TYPE } from "../constants"
-import { setPayRate, setPayType, setCountingStatus, resetPayRate } from "../actions"
+import { PAY_TYPE } from "../constants";
+import { setPayRate, setPayType, setCountingStatus, resetPayRate } from "../actions";
 
 const CalculationForm = ({ payRate, payType, setPayRate, setPayType, setScheduledHours, setCountingStatus, resetPayRate }) => {
   return (

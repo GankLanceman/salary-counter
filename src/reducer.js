@@ -1,10 +1,9 @@
 import { PAY_TYPE } from "./constants"
-import { SET_PAY_RATE, SET_PAY_TYPE, RECALCULATE_SALARY, RESET_PAY_RATE, SET_COUNTING_STATUS, SET_SCHEDULED_HOURS } from "./actions";
+import { SET_PAY_RATE, SET_PAY_TYPE, RECALCULATE_SALARY, RESET_PAY_RATE, SET_COUNTING_STATUS } from "./actions";
 
 const initialState = {
   payRate: null,
   payType: PAY_TYPE.HOURLY,
-  scheduledHours: null,
   amountEarned: 0,
   ratePerSecond: 0,
   shouldCount: false
@@ -34,17 +33,12 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         payType: action.payType
       }
-    case SET_SCHEDULED_HOURS:
-      return {
-        ...state,
-        scheduledHours: action.scheduledHours
-      }
     case RESET_PAY_RATE:
       return {
         ...initialState
       };
     case SET_COUNTING_STATUS:
-      if (state.payRate === null || state.scheduledHours === null) {
+      if (state.payRate === null) {
         return {
           ...state,
           shouldCount: false
@@ -54,10 +48,10 @@ const rootReducer = (state = initialState, action) => {
       let ratePerSecond = 0;
 
       if (state.payType === PAY_TYPE.HOURLY) {
-        ratePerSecond = (state.payRate / state.scheduledHours)/100
+        ratePerSecond = (state.payRate/60)/60
       }
       else {
-        ratePerSecond = (((state.payRate/52)/40)/state.scheduledHours)/100
+        ratePerSecond = (((state.payRate/52)/40)/60)/60
       }
 
       return {

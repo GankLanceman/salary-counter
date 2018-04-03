@@ -5,7 +5,7 @@ import Clock from "./containers/clock";
 import Salary from "./containers/salary";
 import CalculationForm from "./containers/calculation-form";
 
-import './styles/app.css';
+import './app.css';
 
 
 const App = ({store}) => {

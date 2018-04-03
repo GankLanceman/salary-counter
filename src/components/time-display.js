@@ -1,7 +1,7 @@
 import React from "react"
 import padStart from "lodash.padstart"
 
-import '../styles/app.css';
+import '../app.css';
 
 const TimeDisplay = ({ currentTime }) => {
   

@@ -1,16 +1,9 @@
 import { connect } from "react-redux";
-import React from "react";
 
-const Salary = ({ amountEarned }) => {
-  return (
-    <div className={`salary-text ${amountEarned > 0 ? "green-text" : ""}`}>
-      {amountEarned.toFixed(2)}
-    </div>
-  )
-}
+import DollarDisplay from "../components/dollar-display"
 
 const mapStateToProps = ({ amountEarned }) => ({
-  amountEarned
+  dollarAmount: amountEarned
 })
 
-export default connect(mapStateToProps)(Salary);
+export default connect(mapStateToProps)(DollarDisplay);

@@ -1,6 +1,6 @@
 import React from "react"
 
-import "../styles/app.css"
+import "../app.css"
 
 const DateDisplay = ({ currentDate }) => {
 

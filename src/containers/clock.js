@@ -20,7 +20,7 @@ class Clock extends Component {
     this.timer = setInterval(() => {
       this.timerCallback();
     },
-      1000)
+    1000)
   }
 
   componentWillUnmount() {

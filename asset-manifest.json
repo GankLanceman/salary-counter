@@ -1,13 +1,13 @@
 {
   "main.css": "/salary-counter/static/css/main.e7f40189.chunk.css",
-  "main.js": "/salary-counter/static/js/main.ff69968b.chunk.js",
-  "main.js.map": "/salary-counter/static/js/main.ff69968b.chunk.js.map",
-  "static/js/1.4d815981.chunk.js": "/salary-counter/static/js/1.4d815981.chunk.js",
-  "static/js/1.4d815981.chunk.js.map": "/salary-counter/static/js/1.4d815981.chunk.js.map",
+  "main.js": "/salary-counter/static/js/main.f2ba62f1.chunk.js",
+  "main.js.map": "/salary-counter/static/js/main.f2ba62f1.chunk.js.map",
+  "static/js/1.877fd38d.chunk.js": "/salary-counter/static/js/1.877fd38d.chunk.js",
+  "static/js/1.877fd38d.chunk.js.map": "/salary-counter/static/js/1.877fd38d.chunk.js.map",
   "runtime~main.js": "/salary-counter/static/js/runtime~main.351ffd93.js",
   "runtime~main.js.map": "/salary-counter/static/js/runtime~main.351ffd93.js.map",
   "static/css/main.e7f40189.chunk.css.map": "/salary-counter/static/css/main.e7f40189.chunk.css.map",
   "index.html": "/salary-counter/index.html",
-  "precache-manifest.febf893a70a3fecaca1c87b3fbbc0fd6.js": "/salary-counter/precache-manifest.febf893a70a3fecaca1c87b3fbbc0fd6.js",
+  "precache-manifest.6e3ee2062dbc38d6e42ca2eb121440d6.js": "/salary-counter/precache-manifest.6e3ee2062dbc38d6e42ca2eb121440d6.js",
   "service-worker.js": "/salary-counter/service-worker.js"
 }
